@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      /* Set font to Helvetica for <p> elements */
+      p {
+          font-family: Helvetica, Arial, sans-serif;
+      }
+  </style>
+    <title>Stock Price Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+  </head>
+<body font-family: Helvetica, Arial, sans-serif;>
+    <form id="add-ticker-form">
+      <p id="ticker-message">&emsp;&emsp;Add ticker symbol as per Yahoo Finance ticker code.</p>
+      &emsp;<input type="text" id="new-ticker" placeholder="Add Ticker" required>
+      <button type="submit">Add</button>
+    </form>
+    <p id="timer">&emsp;&emsp;Next update in <span id="counter"></span> seconds.</p>
+    <div id="tickers-grid"></div>
+</body>
+</html>
